@@ -1,0 +1,21 @@
+@import 'modules/normalize'; // v7.0.0
+@import 'modules/variables';
+@import 'modules/mixins';
+@import 'modules/base'; // styles of tags
+@import '../fonts/font-awesome/scss/font-awesome.scss';
+// @import '../fonts/ionicons-2.0.1/scss/ionicons.scss'; // v2.0.1
+@import 'modules/global'; // service styles (is-hidden, relative, bold etc.)
+@import 'modules/grid';
+
+
+@import 'modules/components/main';
+
+
+@import 'modules/themes';
+@import 'modules/main-styles';
+@import 'modules/states';
+
+
+// desktop first
+@import 'modules/media-md'; // < ≈960px
+@import 'modules/media-sm'; // < ≈ 600px

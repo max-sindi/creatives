@@ -1,0 +1,30 @@
+-var navList = ['Home','Pages','Features','Extensions','Tutorials','Contact us'];
+-var socialIcons = ['facebook', 'twitter', 'skype', 'linkedin']
+
+header.header-l
+  .wrapper
+    .header__inside.clearfix
+
+      .header__logo-l.top-logo
+        a.top-logo__link(href="#")
+          img.top-logo__img(src='img/logo.png')
+
+      .header__social-l.top-social
+        ul.top-social__list
+          each val, i in socialIcons
+            li.top-social__item
+              a.top-social__link(href="#")
+                i(class=(' fa ' + ' fa-' + val + ' top-social__icon'))
+
+      nav.header__nav-l.top-nav
+        .top-nav__toggler-l#top-nav__toggler
+          button.top-nav__toggler-inside#js-nav-toggler(data-toggle-target="#top-nav")
+            span.top-nav__toggler-stick
+            span.top-nav__toggler-stick
+            span.top-nav__toggler-stick
+
+        ul.top-nav__list#top-nav
+          each val, i in navList
+            li.top-nav__item
+              a(class= (i !== 0 ? 'top-nav__link' : 'top-nav__link current')
+                href="#")= val

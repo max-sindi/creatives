@@ -1,0 +1,29 @@
+.top-nav {
+  &__link:hover {
+    &:before {
+      display: block;
+    }
+  }
+  &__toggler-inside {
+    &:focus {
+      outline: 0;
+
+      .top-nav__toggler-stick {
+        box-shadow: 0px 0px 7px 1px rgba(17, 116, 158, 0.8);
+      }
+    }
+  }
+}
+
+.top-section__main.small-visibility {
+  opacity: 0.2;
+}
+
+.scroll-down {
+  &__button {
+    &:focus {
+      outline: none;
+      transform: scale(0.9);
+    }
+  }
+}

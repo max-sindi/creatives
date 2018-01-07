@@ -1,0 +1,45 @@
+.extra-bold {
+	font-weight: 800;
+}
+.flex {
+	display: flex;
+}
+.flex-wrap {
+	flex-wrap: wrap
+}
+.center-block {
+	margin-left: auto;
+	margin-right: auto;
+}
+.text-center {
+	text-align: center;
+}
+.third-part {
+	width: (100%/3);
+}
+.is-transparent {
+  opacity: 0;
+}
+.relative {
+  position: relative;
+}
+.fa-facebook:before {
+  content: '\f09a';
+}
+.fa-twitter:before {
+  content: '\f099';
+}
+.fa-skype:before {
+  content: '\f17e';
+}
+.fa-linkedin:before {
+  content: '\f0e1';
+}
+.fa-angle-down:before {
+  content: '\f107';
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

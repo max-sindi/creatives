@@ -1,0 +1,9 @@
+.header-l {
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.header__inside {
+  display: flex; }
+
+/*# sourceMappingURL=top-block.css.map */

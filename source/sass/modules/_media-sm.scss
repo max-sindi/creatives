@@ -1,0 +1,50 @@
+@media (max-width: $sm) { // $sm: 600px;
+  .top-section {
+    padding-top: 178px;
+  }
+
+  .header {
+    &__logo-l {
+      width: 100%;
+      float: none;
+    }
+
+    &__nav-l {
+      position: absolute;
+      bottom: auto;
+      left: auto;
+    }
+
+    &__social-l {
+      padding-top: 37px;
+    }
+  }
+
+  .top-nav {
+    &__toggler-inside {
+      margin-right: auto;
+      margin-left: 0;
+    }
+
+    &__item {
+      text-align: left;
+    }
+
+    &__link {
+      &:before {
+        left: auto;
+        right: -44px;
+      }
+    }
+  }
+
+  .top-logo {
+      text-align: center;
+  }
+
+  .top-brand {
+    &__title {
+      font-size: 45px;
+    }
+  }
+}

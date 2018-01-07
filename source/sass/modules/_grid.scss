@@ -1,0 +1,15 @@
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: $md) {
+  .wrapper {
+    max-width: $md - 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

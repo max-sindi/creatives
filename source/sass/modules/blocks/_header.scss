@@ -1,0 +1,141 @@
+.header {
+  &-l {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255, .38)
+  }
+
+  &__inside {
+    position: relative;
+    padding: 18px 0;
+  }
+
+  &__logo-l {
+    float: left;
+  }
+
+  &__nav-l {
+    float: right;
+  }
+
+  &__social-l {
+    float: right;
+    margin-left: 50px;
+  }
+}
+
+.top-logo {
+  &__link {
+    display: inline-block;
+  }
+}
+
+.top-social {
+  padding-top: 33px;
+
+  &__list {
+    word-spacing: -1px;
+  }
+
+  &__item {
+    display: inline-block;
+    text-align: center;
+    word-spacing: 0;
+
+    &:first-child {
+      .top-social__icon {
+        padding-left: 0;
+      }
+    }
+    &:last-child {
+      .top-social__icon {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__icon {
+    width: 18px;
+    padding: 0 10px;
+    box-sizing: content-box;
+    font-size: 19px;
+    color: #f5f5f5;
+  }
+}
+.top-nav {
+  position: relative;
+  padding-top: 30px;
+
+  &__item {
+    display: inline-block;
+    padding: 0 19px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+    font: 20px $myriad;
+    color: #fff;
+    z-index: 2;
+
+    &:before {
+      display: none;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 6px;
+      bottom: -44px;
+      background-color: $blue;
+    }
+
+    &.current {
+      &:before {
+        display: block;
+      }
+    }
+  }
+
+  &__toggler-l {
+    display: none;
+  }
+
+  &__toggler-inside {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 40px;
+    margin-left: auto;
+    text-align: left;
+    background-color: transparent;
+  }
+
+  &__toggler-stick {
+    height: 4px;
+    position: absolute;
+    width: 100%;
+    background-color: $blue;
+    border-radius: 8px;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: calc(50% - 2px); // 2px = height(4px)/2
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
+}
