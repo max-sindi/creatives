@@ -460,6 +460,9 @@ a {
 .flex-wrap {
   flex-wrap: wrap; }
 
+.flex-reverse {
+  flex-direction: row-reverse; }
+
 .center-block {
   margin-left: auto;
   margin-right: auto; }
@@ -563,6 +566,12 @@ a {
 
 .awesome-section {
   background-color: #11749e; }
+
+.chess-row--odd {
+  background-color: #222; }
+
+.chess-row--even {
+  background-color: #fff; }
 
 html {
   font-size: 16px; }
@@ -797,6 +806,69 @@ html {
   .feature__bottom-description {
     font: 15px/24px "Gotham", serif; }
 
+.chess-row {
+  position: relative;
+  overflow: hidden; }
+  .chess-row__content-l {
+    width: 50%; }
+  .chess-row__picture-l {
+    width: 50%; }
+  .chess-row--odd {
+    color: #fff; }
+  .chess-row--even {
+    color: #222; }
+    .chess-row--even .chess-title__date:after {
+      background-color: #000; }
+  .chess-row__picture-img {
+    width: 100%;
+    height: 100%; }
+
+.chess-content__wrap {
+  padding-top: 6.5625rem;
+  padding-bottom: 7.1875rem; }
+  @media (min-width: 993px) {
+    .chess-content__wrap {
+      max-width: 600px; } }
+  .chess-content__wrap--left {
+    margin-left: auto;
+    margin-right: 0;
+    padding-right: 95px; }
+  .chess-content__wrap--right {
+    margin-right: auto;
+    margin-left: 0;
+    padding-left: 65px; }
+
+.chess-content__title-l {
+  margin-bottom: 2.5rem; }
+
+.chess-title__top-l {
+  margin-bottom: 15px;
+  font: 13px "Gotham", serif; }
+
+.chess-title__date {
+  position: relative;
+  padding-right: 15px; }
+  .chess-title__date:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #fff; }
+
+.chess-title__culture {
+  padding-left: 15px; }
+
+.chess-title__title {
+  font-size: 25px; }
+
+.chess-description {
+  font: 15px/24px "Gotham", serif; }
+  .chess-description__par {
+    margin-bottom: 2.0625rem; }
+    .chess-description__par:last-child {
+      margin-bottom: 0; }
+
 .top-nav__link:hover:before {
   display: block; }
 
@@ -844,7 +916,32 @@ html {
     padding: 0 15px;
     font-size: 27px; }
   .top-brand__title {
-    font-size: 100px; } }
+    font-size: 100px; }
+  .chess-row {
+    text-align: center; }
+    .chess-row--odd .chess-row__picture-l:before {
+      background-color: rgba(0, 0, 0, 0.85); }
+    .chess-row--even .chess-row__picture-l:before {
+      background-color: rgba(255, 255, 255, 0.85); }
+    .chess-row__picture-l {
+      position: absolute;
+      width: 100%;
+      z-index: 0; }
+      .chess-row__picture-l:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1; }
+    .chess-row__content-l {
+      width: 100%;
+      z-index: 1; }
+  .chess-content__wrap {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 3rem 15px; }
+  .chess-content__title-l {
+    margin-bottom: 1.5rem; } }
 
 @media (max-width: 670px) {
   .top-section {
@@ -869,6 +966,8 @@ html {
   .top-logo {
     text-align: center; }
   .top-brand__title {
-    font-size: 45px; } }
+    font-size: 45px; }
+  .chess-row__picture-l {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */

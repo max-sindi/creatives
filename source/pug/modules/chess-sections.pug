@@ -1,0 +1,34 @@
+-var imgs = ['chess-1.png', 'chess-2.png'];
+
+-
+ function isOdd(number) {
+    if( (number+1 % 2) === 1 ) {
+      return true;
+    } else {
+      return false;
+    }
+ };
+
+.section.chess-section
+    each val, i in (new Array(2) )
+      div(class='chess-row flex chess-row' + (isOdd(i) ? '--odd ' : '--even flex-reverse '))
+        .chess-row__content-l.chess-content
+          .wrapper.chess-content__wrap(class='chess-content__wrap' + (isOdd(i) ? '--left' : '--right'))
+
+
+            .chess-content__title-l.chess-title
+              .chess-title__top-l
+                span.chess-title__date Jan 4, 2016
+                span.chess-title__culture In Culture
+
+              h3.chess-title__title.h3 Akita Inu Dog
+
+
+            .chess-content__description-l.chess-description
+              p.chess-description__par Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+              p.chess-description__par Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur
+
+
+        .chess-row__picture-l
+          img.chess-row__picture-img(src='img/' + imgs[i])
+

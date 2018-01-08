@@ -5,3 +5,15 @@
 .awesome-section {
   background-color: $blue;
 }
+
+.chess-row {
+
+  &--odd {
+    background-color: #222;
+  }
+
+  &--even {
+    background-color: #fff;
+  }
+
+}

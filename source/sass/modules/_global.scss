@@ -5,7 +5,10 @@
 	display: flex;
 }
 .flex-wrap {
-	flex-wrap: wrap
+	flex-wrap: wrap;
+}
+.flex-reverse {
+  flex-direction: row-reverse;
 }
 .center-block {
 	margin-left: auto;

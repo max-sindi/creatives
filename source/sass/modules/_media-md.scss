@@ -58,4 +58,56 @@
       font-size: 100px;
     }
   }
+
+  .chess-row {
+    text-align: center;
+
+    &--odd {
+      .chess-row__picture-l {
+        &:before {
+          background-color: rgba(0, 0, 0, 0.85);
+        }
+      }
+    }
+
+    &--even {
+      .chess-row__picture-l {
+        &:before {
+          background-color: rgba(255, 255, 255, 0.85);
+        }
+      }
+    }
+
+    &__picture-l {
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+
+    &__content-l {
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  .chess-content__wrap {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 3rem 15px;
+  }
+
+  .chess-content__title-l {
+    margin-bottom: 1.5rem;
+  }
+
+
+
 }

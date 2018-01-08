@@ -1,0 +1,99 @@
+.chess-row {
+  position: relative;
+  overflow: hidden;
+
+  &__content-l {
+    width: 50%;
+  }
+
+  &__picture-l {
+    width: 50%;
+  }
+
+  &--odd {
+    color: #fff;
+  }
+
+  &--even {
+    color: #222;
+
+    .chess-title__date {
+      &:after {
+        background-color: #000;
+      }
+    }
+  }
+
+  &__picture-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.chess-content {
+  &__wrap {
+    padding-top: rem(105);
+    padding-bottom: rem(115);
+
+    @media(min-width: $md + 1px) {
+      max-width: 600px;
+    }
+
+    &--left {
+      margin-left: auto;
+      margin-right: 0;
+      padding-right: 95px;
+    }
+
+    &--right {
+      margin-right: auto;
+      margin-left: 0;
+      padding-left: 65px;
+    }
+  }
+
+  &__title-l {
+    margin-bottom: rem(40);
+  }
+}
+
+.chess-title {
+  &__top-l {
+    margin-bottom: 15px;
+    font: 13px $gotham-book;
+  }
+
+  &__date {
+    position: relative;
+    padding-right: 15px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 2px;
+      background-color: #fff;
+    }
+  }
+
+  &__culture {
+    padding-left: 15px;
+  }
+
+  &__title {
+    font-size: 25px;
+  }
+}
+
+.chess-description  {
+  font: 15px/24px $gotham-book;
+
+  &__par {
+    margin-bottom: rem(33);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
