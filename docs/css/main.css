@@ -503,14 +503,66 @@ a {
   margin: 0 auto;
   padding: 0 15px; }
 
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 962px; } }
+
 @media (max-width: 992px) {
   .wrapper {
-    max-width: 962px;
-    padding-left: 15px;
-    padding-right: 15px; } }
+    max-width: 640px; } }
+
+@media (max-width: 670px) {
+  .wrapper {
+    max-width: 100%; } }
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.col {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.lg-12 {
+  width: 100%; }
+
+.lg-6 {
+  width: 50%; }
+
+.lg-4 {
+  width: 33.33333%; }
+
+.lg-3 {
+  width: 25%; }
+
+@media (max-width: 992px) {
+  .md-12 {
+    width: 100%; }
+  .md-6 {
+    width: 50%; }
+  .md-4 {
+    width: 33.33333%; }
+  .md-3 {
+    width: 25%; } }
+
+@media (max-width: 670px) {
+  .row {
+    margin-right: 0;
+    margin-left: 0; }
+  .sm-12 {
+    width: 100%; }
+  .sm-6 {
+    width: 50%; }
+  .sm-4 {
+    width: 33.33333%; }
+  .sm-3 {
+    width: 25%; } }
 
 .top-section {
-  background: url("../img/top-section.png") no-repeat center center/cover; }
+  background: #2f2d2c url("../img/top-section.png") no-repeat center center/cover; }
+
+.awesome-section {
+  background-color: #11749e; }
 
 html {
   font-size: 16px; }
@@ -528,6 +580,26 @@ html {
 
 .section {
   position: relative; }
+
+.section-title {
+  text-align: center;
+  position: relative;
+  padding: 4.6875rem 0; }
+
+.h2 {
+  position: relative;
+  font: 500 2.375rem/3rem "Gotham", serif;
+  text-transform: uppercase;
+  z-index: 1; }
+
+.big-letter {
+  top: 0.3125rem;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  font: 700 15.4375rem/0.83 "Roboto", sans-serif;
+  text-transform: uppercase;
+  z-index: 0; }
 
 .header-l {
   position: absolute;
@@ -627,18 +699,25 @@ html {
   padding-top: 116px; }
   .top-section__brand-l {
     padding-top: calc( (340/880) * 100vh - 116px); }
-    @media (max-height: 620px) {
-      .top-section__brand-l {
-        padding-top: 10vh; } }
   .top-section__scroll-l {
     display: none;
     position: absolute;
     left: 0;
     right: 0;
     bottom: calc( (100/880) * 100vh); }
-    @media (max-height: 620px) {
-      .top-section__scroll-l {
-        bottom: 50px; } }
+
+@media (max-height: 620px) {
+  .top-section__brand-l {
+    padding-top: 16vh; }
+  .top-section__scroll-l {
+    bottom: 30px; } }
+
+@media (max-height: 520px) {
+  .top-section {
+    height: auto; }
+    .top-section__scroll-l {
+      position: relative;
+      padding-top: 50px; } }
 
 .top-brand {
   text-align: center; }
@@ -671,17 +750,52 @@ html {
     border: 1px solid #fff;
     border-radius: 50%; }
 
-body {
-  padding-bottom: 1000px; }
+.awesome-section {
+  padding: 6.25rem 0 7.8125rem; }
+  .awesome-section__title-l {
+    margin-bottom: 4.0625rem; }
 
-@media (max-height: 620px) {
-  .top-section {
-    height: auto; }
-    .top-section__brand-l {
-      padding-top: 130px; }
-    .top-section__scroll-l {
-      position: relative;
-      padding-top: 115px; } }
+.awesome-title__title {
+  color: #fff; }
+
+.awesome-title__letter {
+  color: rgba(255, 255, 255, 0.18); }
+
+.feature {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2.5rem; }
+  .feature__top-l {
+    margin-bottom: 1.4375rem; }
+  .feature__top-circle {
+    position: relative;
+    width: 133px;
+    height: 133px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #2e85aa; }
+    .feature__top-circle:before {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      background-repeat: no-repeat;
+      background-position: center center; }
+    .feature__top-circle.write-icon:before {
+      background-image: url("../img/write-icon.png"); }
+    .feature__top-circle.say-icon:before {
+      background-image: url("../img/say-icon.png"); }
+    .feature__top-circle.search-icon:before {
+      background-image: url("../img/search-icon.png"); }
+  .feature__bottom-title {
+    margin-bottom: 2.125rem;
+    font: 500 18px "Gotham", serif;
+    text-transform: uppercase; }
+  .feature__bottom-description {
+    font: 15px/24px "Gotham", serif; }
 
 .top-nav__link:hover:before {
   display: block; }

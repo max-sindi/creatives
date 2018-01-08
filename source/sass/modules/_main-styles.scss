@@ -22,4 +22,28 @@ html {
   position: relative;
 }
 
+.section-title {
+  text-align: center;
+  position: relative;
+  padding: rem(75) 0;
+}
+
+.h2 {
+  position: relative;
+  font: 500 rem(38)/rem(48) $gotham;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.big-letter {
+  top: rem(5);
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  font: 700 rem(247)/0.83 $roboto;
+  text-transform: uppercase;
+  z-index: 0;
+}
+
 @import 'blocks/top-block';
+@import 'blocks/awesome-section';

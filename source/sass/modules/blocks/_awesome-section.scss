@@ -1,0 +1,75 @@
+.awesome-section {
+  padding: rem(100) 0 rem(125);
+
+  &__title-l {
+    margin-bottom: rem(65);
+  }
+}
+
+.awesome-title {
+  &__title {
+    color: #fff;
+  }
+  &__letter {
+    color: rgba(255, 255, 255, 0.18);
+  }
+}
+
+.feature {
+  text-align: center;
+  color: #fff;
+  margin-bottom: rem(40);
+
+  &__top-l {
+    margin-bottom: rem(23);
+  }
+
+  &__top-circle {
+    position: relative;
+    width: 133px;
+    height: 133px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #2e85aa;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &.write-icon {
+      &:before {
+        background-image: url('../img/write-icon.png');
+      }
+    }
+
+    &.say-icon {
+      &:before {
+        background-image: url('../img/say-icon.png');
+      }
+    }
+
+    &.search-icon {
+      &:before {
+        background-image: url('../img/search-icon.png');
+      }
+    }
+  }
+
+  &__bottom-title {
+    margin-bottom: rem(34);
+    font: 500 18px $gotham;
+    text-transform: uppercase;
+  }
+
+  &__bottom-description {
+    font: 15px/24px $gotham;
+  }
+}

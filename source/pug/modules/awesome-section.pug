@@ -1,0 +1,20 @@
+-var featureNum = ['one', 'two', 'three', 'four'];
+-var featureIside = 'Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Donec id elit non mi porta gravida at eget metus.';
+-var featureIcon = ['write', 'write', 'search', 'say'];
+
+section.section.awesome-section
+  .wrapper
+    .awesome-section__title-l.awesome-title.section-title
+      span.awesome-title__letter.big-letter W
+      h2.awesome-title__title.h2 We Are An Awesome Agency
+
+    .awesome-section__features-l.flex.flex-wrap.row
+      each val, i in featureNum
+        .feature.col.lg-3.md-6.sm-12
+          .feature__top-l
+            .feature__top-circle(class=( featureIcon[i] + '-icon') )
+
+          .feature__bottom-l
+            .feature__bottom-title= 'feature ' + featureNum[i]
+            .feature__bottom-description= featureIside
+
