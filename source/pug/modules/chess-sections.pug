@@ -1,34 +1,26 @@
 -var imgs = ['chess-1.png', 'chess-2.png'];
 
+include chess-row
+
 -
- function isOdd(number) {
-    if( (number+1 % 2) === 1 ) {
-      return true;
-    } else {
-      return false;
-    }
- };
+ let pars = [
+  'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor',
+  'Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur'
+ ],
 
-.section.chess-section
-    each val, i in (new Array(2) )
-      div(class='chess-row flex chess-row' + (isOdd(i) ? '--odd ' : '--even flex-reverse '))
-        .chess-row__content-l.chess-content
-          .wrapper.chess-content__wrap(class='chess-content__wrap' + (isOdd(i) ? '--left' : '--right'))
+ obj1  = {
+  class: 'chess-black',
+  dir: 'left',
+  imgSrc: imgs[0],
+  pars: pars
+ },
 
+ obj2 = {
+  class: 'chess-white',
+  dir: 'right',
+  imgSrc: imgs[1],
+  pars: pars
+ }
 
-            .chess-content__title-l.chess-title
-              .chess-title__top-l
-                span.chess-title__date Jan 4, 2016
-                span.chess-title__culture In Culture
-
-              h3.chess-title__title.h3 Akita Inu Dog
-
-
-            .chess-content__description-l.chess-description
-              p.chess-description__par Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-              p.chess-description__par Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur
-
-
-        .chess-row__picture-l
-          img.chess-row__picture-img(src='img/' + imgs[i])
-
++chessRow(obj1)
++chessRow(obj2)

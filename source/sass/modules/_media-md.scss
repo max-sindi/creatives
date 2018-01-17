@@ -62,18 +62,18 @@
   .chess-row {
     text-align: center;
 
-    &--odd {
+    &--content-left {
       .chess-row__picture-l {
         &:before {
-          background-color: rgba(0, 0, 0, 0.85);
+          background-color: rgba(34, 34, 34, 0.85);
         }
       }
     }
 
-    &--even {
+    &--content-right {
       .chess-row__picture-l {
         &:before {
-          background-color: rgba(255, 255, 255, 0.85);
+          background-color: rgba(243, 243, 243, 0.85);
         }
       }
     }
@@ -81,6 +81,7 @@
     &__picture-l {
       position: absolute;
       width: 100%;
+      // height: 100%;
       z-index: 0;
 
       &:before {
@@ -98,7 +99,7 @@
     }
   }
 
-  .chess-content__wrap {
+  .chess-row__content-wrap {
     margin-right: auto;
     margin-left: auto;
     padding: 3rem 15px;
@@ -108,6 +109,22 @@
     margin-bottom: 1.5rem;
   }
 
+  .notes-section {
+    &__item-description {
+      padding: 90px 0 0;
+      text-align: center;
+
+      &:before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .notes-section {
+    padding: 3.5rem 0;
+  }
 
 
 }

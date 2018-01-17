@@ -567,11 +567,14 @@ a {
 .awesome-section {
   background-color: #11749e; }
 
-.chess-row--odd {
+.chess-row--content-left {
   background-color: #222; }
 
-.chess-row--even {
-  background-color: #fff; }
+.chess-row--content-right {
+  background-color: #f3f3f3; }
+
+.notes-section {
+  background-color: #11749e; }
 
 html {
   font-size: 16px; }
@@ -808,66 +811,129 @@ html {
 
 .chess-row {
   position: relative;
+  display: flex;
   overflow: hidden; }
   .chess-row__content-l {
     width: 50%; }
   .chess-row__picture-l {
     width: 50%; }
-  .chess-row--odd {
+  .chess-row--content-left {
     color: #fff; }
-  .chess-row--even {
+  .chess-row--content-right {
+    flex-direction: row-reverse;
     color: #222; }
-    .chess-row--even .chess-title__date:after {
-      background-color: #000; }
-  .chess-row__picture-img {
+  .chess-row__image {
     width: 100%;
     height: 100%; }
-
-.chess-content__wrap {
-  padding-top: 6.5625rem;
-  padding-bottom: 7.1875rem; }
-  @media (min-width: 993px) {
-    .chess-content__wrap {
-      max-width: 600px; } }
-  .chess-content__wrap--left {
-    margin-left: auto;
-    margin-right: 0;
-    padding-right: 95px; }
-  .chess-content__wrap--right {
-    margin-right: auto;
-    margin-left: 0;
-    padding-left: 65px; }
-
-.chess-content__title-l {
-  margin-bottom: 2.5rem; }
-
-.chess-title__top-l {
-  margin-bottom: 15px;
-  font: 13px "Gotham", serif; }
-
-.chess-title__date {
-  position: relative;
-  padding-right: 15px; }
-  .chess-title__date:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    height: 100%;
-    width: 2px;
-    background-color: #fff; }
-
-.chess-title__culture {
-  padding-left: 15px; }
-
-.chess-title__title {
-  font-size: 25px; }
-
-.chess-description {
-  font: 15px/24px "Gotham", serif; }
-  .chess-description__par {
+  .chess-row__content-wrap {
+    padding-top: 6.5625rem;
+    padding-bottom: 7.1875rem; }
+    @media (min-width: 993px) {
+      .chess-row__content-wrap {
+        max-width: 481px; } }
+    @media (min-width: 1201px) {
+      .chess-row__content-wrap {
+        max-width: 600px; } }
+    .chess-row__content-wrap--left {
+      margin-left: auto;
+      margin-right: 0;
+      padding-right: 95px; }
+    .chess-row__content-wrap--right {
+      margin-right: auto;
+      margin-left: 0;
+      padding-left: 65px; }
+  .chess-row__title-l {
+    margin-bottom: 2.5rem; }
+  .chess-row__title-top {
+    margin-bottom: 15px;
+    font: 13px "Gotham", serif; }
+  .chess-row__date {
+    position: relative;
+    padding-right: 15px; }
+    .chess-row__date:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 2px;
+      background-color: #fff; }
+  .chess-row__culture {
+    padding-left: 15px; }
+  .chess-row__title-name {
+    font-size: 25px; }
+  .chess-row__content-text {
+    font: 15px/24px "Gotham", serif; }
+  .chess-row__par {
     margin-bottom: 2.0625rem; }
-    .chess-description__par:last-child {
+    .chess-row__par:last-child {
       margin-bottom: 0; }
+
+.design-chess-row {
+  color: #fff; }
+
+.design-image {
+  width: 390px;
+  height: 650px; }
+
+.design-picture-l {
+  padding: 50px; }
+
+.blog-section {
+  padding: 5.625rem 0 6.875rem; }
+
+.blog-section__items-l {
+  margin-bottom: -3.75rem; }
+
+.blog-title__title {
+  margin-bottom: 115px;
+  color: #222; }
+
+.blog-title__letter {
+  color: rgba(24, 24, 24, 0.18); }
+
+.blog-title__secondary {
+  font: 1.875rem "Gotham", serif;
+  color: #222; }
+
+.blog-item {
+  margin-bottom: 3.75rem;
+  text-align: center; }
+  .blog-item__top-l {
+    width: 100%;
+    margin-bottom: 2.75rem; }
+  .blog-item__top-img {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .blog-item__bottom-title {
+    margin-bottom: 1.5625rem;
+    font: 500 18px "Gotham", serif;
+    text-transform: uppercase;
+    color: #11749e; }
+  .blog-item__bottom-description {
+    font: 15px/24px "Gotham", serif;
+    color: #222; }
+
+.notes-section {
+  padding: 7.125rem 0 9.75rem; }
+  .notes-section__items-l {
+    margin-bottom: -40px; }
+  .notes-section__item {
+    margin-bottom: 40px; }
+  .notes-section__item-description {
+    position: relative;
+    padding-left: 6.5rem;
+    padding-right: 17px;
+    font: 15px/24px "Gotham", serif;
+    color: #fff; }
+    .notes-section__item-description:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 69px;
+      height: 69px;
+      background: url("../img/write-big-icon.png") no-repeat; }
 
 .top-nav__link:hover:before {
   display: block; }
@@ -919,10 +985,10 @@ html {
     font-size: 100px; }
   .chess-row {
     text-align: center; }
-    .chess-row--odd .chess-row__picture-l:before {
-      background-color: rgba(0, 0, 0, 0.85); }
-    .chess-row--even .chess-row__picture-l:before {
-      background-color: rgba(255, 255, 255, 0.85); }
+    .chess-row--content-left .chess-row__picture-l:before {
+      background-color: rgba(34, 34, 34, 0.85); }
+    .chess-row--content-right .chess-row__picture-l:before {
+      background-color: rgba(243, 243, 243, 0.85); }
     .chess-row__picture-l {
       position: absolute;
       width: 100%;
@@ -936,12 +1002,21 @@ html {
     .chess-row__content-l {
       width: 100%;
       z-index: 1; }
-  .chess-content__wrap {
+  .chess-row__content-wrap {
     margin-right: auto;
     margin-left: auto;
     padding: 3rem 15px; }
   .chess-content__title-l {
-    margin-bottom: 1.5rem; } }
+    margin-bottom: 1.5rem; }
+  .notes-section__item-description {
+    padding: 90px 0 0;
+    text-align: center; }
+    .notes-section__item-description:before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+  .notes-section {
+    padding: 3.5rem 0; } }
 
 @media (max-width: 670px) {
   .top-section {
@@ -967,7 +1042,10 @@ html {
     text-align: center; }
   .top-brand__title {
     font-size: 45px; }
+  .blog-item__top-l {
+    width: 85%;
+    margin: 0 auto 20px; }
   .chess-row__picture-l {
-    display: none; } }
+    height: 100%; } }
 
 /*# sourceMappingURL=main.css.map */

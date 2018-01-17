@@ -1,0 +1,47 @@
+-
+ var templateObject = {
+  class: '',
+  dir: '',
+  imgSrc: '',
+  pars: []
+ }
+
+mixin chessRow(p)
+  .chess-row(class='chess-row--content-' + p.dir + ' ' + p.class + '-chess-row')
+
+    .chess-row__content-l(class=p.class + '-content-l')
+      .wrapper.chess-row__content-wrap(class='chess-row__content-wrap--' + p.dir)
+        .chess-row__title-l(class=p.class + '-title')
+          .chess-row__title-top(class=p.class + '-title-top')
+            span.chess-row__date(class=p.class + '-date') Jan 4, 2016
+            span.chess-row__culture(class=p.class + '-culture') In Culture
+          h3.chess-row__title-name(class=p.class + '-title-name') Akita Inu Dog
+
+        .chess-row__content-text
+          each val in p.pars
+            p.chess-row__par= val
+
+
+    .chess-row__picture-l(class=p.class + '-picture-l')
+      img.chess-row__image(src= ('img/' + p.imgSrc)
+                           class=p.class + '_image')
+
+
+
+
+mixin chessRowWithoutTitleTop(p)
+  .chess-row(class='chess-row--content-' + p.dir + ' ' + p.class + '-chess-row')
+
+    .chess-row__content-l(class=p.class + '-content-l')
+      .wrapper.chess-row__content-wrap(class='chess-row__content-wrap--' + p.dir)
+        .chess-row__title-l(class=p.class + '-title')
+          h3.chess-row__title-name(class=p.class + '-title-name') Akita Inu Dog
+
+        .chess-row__content-text
+          each val in p.pars
+            p.chess-row__par= val
+
+
+    .chess-row__picture-l(class=p.class + '-picture-l')
+      img.chess-row__image(src= ('img/' + p.imgSrc)
+                           class=p.class + '-image')

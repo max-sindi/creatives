@@ -1,0 +1,53 @@
+.blog {
+  &-section {
+    padding: rem(90) 0 rem(110);
+  }
+
+  &-section__items-l {
+    margin-bottom: rem(-60); // compensate items' margin-bottom
+  }
+}
+
+.blog-title {
+  &__title {
+    margin-bottom: 115px;
+    color: #222;
+  }
+
+  &__letter {
+    color: rgba(24, 24, 24, 0.18);
+  }
+
+  &__secondary {
+    font: rem(30) $gotham-book;
+    color: #222;
+  }
+}
+
+.blog-item {
+  margin-bottom: rem(60);
+  text-align: center;
+
+  &__top-l {
+    width: 100%;
+    margin-bottom: rem(44);
+  }
+
+  &__top-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__bottom-title {
+    margin-bottom: rem(25);
+    font: 500 18px $gotham;
+    text-transform: uppercase;
+    color: $blue;
+  }
+
+  &__bottom-description {
+    font: 15px/24px $gotham;
+    color: #222;
+  }
+}

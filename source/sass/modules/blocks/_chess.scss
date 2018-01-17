@@ -1,5 +1,6 @@
 .chess-row {
   position: relative;
+  display: flex;
   overflow: hidden;
 
   &__content-l {
@@ -10,32 +11,29 @@
     width: 50%;
   }
 
-  &--odd {
+  &--content-left {
     color: #fff;
   }
 
-  &--even {
+  &--content-right {
+    flex-direction: row-reverse;
     color: #222;
-
-    .chess-title__date {
-      &:after {
-        background-color: #000;
-      }
-    }
   }
 
-  &__picture-img {
+  &__image {
     width: 100%;
     height: 100%;
   }
-}
 
-.chess-content {
-  &__wrap {
+  &__content-wrap {
     padding-top: rem(105);
     padding-bottom: rem(115);
 
     @media(min-width: $md + 1px) {
+      max-width: ($md - 30px) / 2;
+    }
+
+    @media(min-width: $lg + 1px) {
       max-width: 600px;
     }
 
@@ -55,10 +53,8 @@
   &__title-l {
     margin-bottom: rem(40);
   }
-}
 
-.chess-title {
-  &__top-l {
+  &__title-top {
     margin-bottom: 15px;
     font: 13px $gotham-book;
   }
@@ -81,13 +77,13 @@
     padding-left: 15px;
   }
 
-  &__title {
+  &__title-name {
     font-size: 25px;
   }
-}
 
-.chess-description  {
-  font: 15px/24px $gotham-book;
+  &__content-text {
+    font: 15px/24px $gotham-book;
+  }
 
   &__par {
     margin-bottom: rem(33);
@@ -95,5 +91,20 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.design {
+  &-chess-row {
+   color: #fff;
+ }
+
+  &-image {
+   width: 390px;
+   height: 650px;
+  }
+
+  &-picture-l {
+    padding: 50px;
   }
 }

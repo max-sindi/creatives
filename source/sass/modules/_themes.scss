@@ -8,12 +8,15 @@
 
 .chess-row {
 
-  &--odd {
+  &--content-left {
     background-color: #222;
   }
 
-  &--even {
-    background-color: #fff;
+  &--content-right {
+    background-color: #f3f3f3;
   }
+}
 
+.notes-section {
+  background-color: $blue;
 }

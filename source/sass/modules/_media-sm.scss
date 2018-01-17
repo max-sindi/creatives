@@ -48,11 +48,15 @@
     }
   }
 
-  .chess-row {
-    &__picture-l {
-      display: none;
-    }
+  .blog-item__top-l {
+    width: 85%;
+    margin: 0 auto 20px;
   }
 
+    .chess-row {
 
+    &__picture-l {
+      height: 100%;
+    }
+  }
 }

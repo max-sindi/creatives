@@ -1,0 +1,19 @@
+-var imgs = ['1', '2', '3', '1'];
+
+.section.blog-section
+  .wrapper
+    .blog-section__title-l.blog-title.section-title
+      span.blog-title__letter.big-letter B
+      h2.blog-title__title.h2 Let's blog
+      span.blog-title__secondary We love clean design and advanced digital solutions.
+
+    .blog-section__items-l.flex.flex-wrap.row
+      each val, i in imgs
+        .blog-item.col.lg-3.md-6.sm-12
+          .blog-item__top-l
+            img.blog-item__top-img(src='img/blog-item-' + val + '.png')
+
+          .blog-item__bottom-l
+            .blog-item__bottom-title Fresh Summer Campaign
+            .blog-item__bottom-description Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.
+

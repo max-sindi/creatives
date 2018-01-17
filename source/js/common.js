@@ -16,9 +16,10 @@ $(document).ready(function() {
 
     function checkWidth() {
       let needShow = windowIsSmall();
-      // first time will not work because togglerIsVisible is void yet
+
+      // first time will not work because togglerIsVisible is empty yet
       // and will checked when window.resize
-      if( needShow === togglerIsVisible) {
+      if( needShow === togglerIsVisible ) {
         return;
       }
 
@@ -76,7 +77,7 @@ $(document).ready(function() {
   function topScrollDown() {
 
     $('#scroll-down-l').show();
-    $('#scroll-down-button').click(doScroll);
+    $('#scroll-down-button').click( doScroll );
 
     function doScroll() {
       var page = $(window),
@@ -84,21 +85,19 @@ $(document).ready(function() {
           currentScroll = page.scrollTop(),
           needScroll = sectionHeight - currentScroll,
           i = 0,
-          imax = 100, // fluency
+          i_max = 100, // fluency
           interval = 5, // frequency of scroll
-          part = needScroll / imax,
+          part = needScroll / i_max,
           timer = null;
 
 
       timer = setInterval(function() {
         page.scrollTop(currentScroll + (part * ++i) );
 
-        if(i === imax) {
+        if(i === i_max) {
           clearInterval(timer);
         }
       }, interval);
     }
   }
-
-  // $('.js-toggler').click();
 })

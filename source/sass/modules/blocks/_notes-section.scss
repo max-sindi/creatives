@@ -1,0 +1,29 @@
+.notes-section {
+  padding: rem(114) 0 rem(156);
+
+  &__items-l {
+    margin-bottom: -40px;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+  }
+
+  &__item-description {
+    position: relative;
+    padding-left: rem(104);
+    padding-right: 17px;
+    font: 15px/24px $gotham;
+    color: #fff;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 69px;
+      height: 69px;
+      background: url('../img/write-big-icon.png') no-repeat;
+    }
+  }
+}
