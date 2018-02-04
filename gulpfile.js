@@ -10,7 +10,7 @@ const
 		less = require('gulp-sass'),
 		// nsg = require('node-sprite-generator'),
 		jsConcat = require('gulp-concat'),
-		imgMin = require('gulp-image'),
+		// imgMin = require('gulp-image'),
 		multipipe = require('multipipe'),
 		notify = require('gulp-notify'),
 		postcss = require('gulp-postcss'),
@@ -108,11 +108,11 @@ gulp.task("default", ['sass:compile', 'pug:compile', 'js'],function() {
 Build tasks
 */
 
-gulp.task("img:min", function() {
-	gulp.src('./source/img/*.png')
-			.pipe( imgMin() )
-			.pipe(gulp.dest(`${buildPath}/img/`));
-});
+// gulp.task("img:min", function() {
+// 	gulp.src('./source/img/*.png')
+// 			.pipe( imgMin() )
+// 			.pipe(gulp.dest(`${buildPath}/img/`));
+// });
 
 
 gulp.task('js:build', function() {

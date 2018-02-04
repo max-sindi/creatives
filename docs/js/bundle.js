@@ -1,36 +1,38 @@
 'use strict';
 
-$(document).ready(function () {
+$(document).ready(function() {
   navTogglerCreate();
 
   function navTogglerCreate() {
-    var toggler = $('#top-nav__toggler'),
+    let toggler = $('#top-nav__toggler'),
         toggleTarget = $('#top-nav'),
         wind = $(window),
-        togglerIsVisible = void 0; // boolean in next steps
+        togglerIsVisible; // boolean in next steps
 
 
     checkWidth();
     wind.on('resize', checkWidth);
 
+
     function checkWidth() {
-      var needShow = windowIsSmall();
+      let needShow = windowIsSmall();
 
       // first time will not work because togglerIsVisible is empty yet
       // and will checked when window.resize
-      if (needShow === togglerIsVisible) {
+      if( needShow === togglerIsVisible ) {
         return;
       }
 
-      if (needShow) {
+      if( needShow ) {
         showToggler();
       } else {
         hideToggler();
       }
     }
 
+
     function windowIsSmall() {
-      if (wind.width() <= 992) {
+      if( wind.width() <= 992 ) {
         return true;
       } else {
         return false;
@@ -56,11 +58,11 @@ $(document).ready(function () {
     $('#js-nav-toggler').click(toggleVisible);
 
     function toggleVisible() {
-      var targetToggle = $('#top-nav'),
+      let targetToggle = $('#top-nav'),
           isTargetHidden = $('#top-nav:hidden')[0],
           targetBackSide = $('.top-section__main');
 
-      if (isTargetHidden) {
+      if( isTargetHidden ) {
         targetToggle.fadeIn('fast');
         targetBackSide.addClass('small-visibility');
       } else {
@@ -75,7 +77,7 @@ $(document).ready(function () {
   function topScrollDown() {
 
     $('#scroll-down-l').show();
-    $('#scroll-down-button').click(doScroll);
+    $('#scroll-down-button').click( doScroll );
 
     function doScroll() {
       var page = $(window),
@@ -83,20 +85,19 @@ $(document).ready(function () {
           currentScroll = page.scrollTop(),
           needScroll = sectionHeight - currentScroll,
           i = 0,
-          i_max = 100,
-          // fluency
-      interval = 5,
-          // frequency of scroll
-      part = needScroll / i_max,
+          i_max = 100, // fluency
+          interval = 5, // frequency of scroll
+          part = needScroll / i_max,
           timer = null;
 
-      timer = setInterval(function () {
-        page.scrollTop(currentScroll + part * ++i);
 
-        if (i === i_max) {
+      timer = setInterval(function() {
+        page.scrollTop(currentScroll + (part * ++i) );
+
+        if(i === i_max) {
           clearInterval(timer);
         }
       }, interval);
     }
   }
-});
+})

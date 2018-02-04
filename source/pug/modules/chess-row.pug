@@ -3,7 +3,8 @@
   class: '',
   dir: '',
   imgSrc: '',
-  pars: []
+  pars: [],
+  p: '',
  }
 
 mixin chessRow(p)
@@ -24,7 +25,8 @@ mixin chessRow(p)
 
     .chess-row__picture-l(class=p.class + '-picture-l')
       img.chess-row__image(src= ('img/' + p.imgSrc)
-                           class=p.class + '_image')
+                           class=p.class + '_image'
+                           alt=p.alt)
 
 
 
@@ -44,4 +46,5 @@ mixin chessRowWithoutTitleTop(p)
 
     .chess-row__picture-l(class=p.class + '-picture-l')
       img.chess-row__image(src= ('img/' + p.imgSrc)
-                           class=p.class + '-image')
+                           class=p.class + '-image'
+                           alt=p.alt)
